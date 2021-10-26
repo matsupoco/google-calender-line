@@ -8,7 +8,7 @@ name: today_schedule_chatbot
 # 実はgithub actionsのcronの時刻はUTCなので、日本時間に合わせるために日本時刻から9時間マイナスで設定する必要があります。
 on:
    schedule:
-      - cron: '0 6 30 * *'
+      - cron: '35 6 * * *'
 
 jobs:
   build:
@@ -29,6 +29,7 @@ jobs:
           python -m pip install --upgrade pip
           # 必要なパッケージインストール
           pip install line-bot-sdk
+          pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib
       - name: Run script
         run: |
           # main.pyの実行
