@@ -90,7 +90,7 @@ def main():
     messages = TextSendMessage(text="おはようございます!")
     line_bot_api.push_message(USER_ID,messages=messages)
     
-    today_events = []
+    today_events = TodaysSchedule()
     if not today_events:
         messages = TextSendMessage(text="今日は特に予定はございません!\n自由な1日をお過ごしください。")
         line_bot_api.push_message(USER_ID,messages=messages)
