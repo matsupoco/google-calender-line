@@ -33,5 +33,5 @@ jobs:
           pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib
       - name: Run script
         run: |
-          # main.pyの実行
+          # today_schedule.pyの実行
           python today_schedule.py
