@@ -27,7 +27,7 @@ if os.path.exists('token.pickle'):
         creds = pickle.load(token)
 #期限切れのトークンを持っているかチェック(認証を省略するため)
 if not creds or not creds.valid:
-    if creds and creds.expired and creds.refreshtoken:
+    if creds and creds.expired and creds.refresh_token:
         creds.refresh(Request())
         
     #アクセストークンを要求
